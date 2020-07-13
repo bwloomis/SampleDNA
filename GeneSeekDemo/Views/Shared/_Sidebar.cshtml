@@ -1,0 +1,81 @@
+﻿<div class="sidebar" data-color="gold" data-image="~/images/sidebar-3.jpg">
+    <!-- Tip 1: you can change the color of the sidebar using: data-color="blue
+    | azure | green | orange | red | purple" Tip 2: you can also add an image
+    using data-image tag -->
+    <div class="sidebar-wrapper container-fluid"> <!-- container-fluid -->
+        <div class="logo">
+            <a href="http://www.neogen.com" class="simple-text">
+                <img src="~/images/Neogen-Logo.png" height="60" /> <!-- width="" -->
+            </a>
+        </div>
+        <ul class="nav">
+            <li class="active">
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                <!-- a href="dashboard.html"> -->
+                    <i class="pe-7s-graph2"></i>
+                    <p>Dashboard</p>
+                </a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Tables">
+                    <!-- a href="notifications.html" -->
+                        <i class="pe-7s-ticket"></i>
+                        <p>Orders</p>
+                </a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Users" asp-action="Index">
+                    <i class="pe-7s-shuffle"></i>
+                    <p>QC Reports</p>
+                </a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="About">
+                    <!--a href="notifications.html" -->
+                    <i class="pe-7s-eyedropper"></i>
+                    <p>Samples</p>
+                </a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Contact">
+                    <i class="pe-7s-female"></i>
+                    <p>
+                        Gender
+                    </p>
+                </a>
+            </li>
+           
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="About">
+                    <i class="pe-7s-search"></i>
+                    <p>Query Subset</p>
+                </a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Contact">
+                    <i class="pe-7s-mail-open-file"></i>
+                    <p>Notifications</p>
+                </a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="pe-7s-glasses"></i>
+                    <p>Audit</p>
+                </a>
+            </li>
+
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="pe-7s-user"></i>
+                    <p>My Account</p>
+                </a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="pe-7s-config"></i>
+                    <p>Administration</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

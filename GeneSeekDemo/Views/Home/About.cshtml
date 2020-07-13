@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+<div class="main-panel">
+
+    @Html.Partial("~/Views/Shared/_NavigationMenu.cshtml")
+
+    <div class="container body-content content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">About</h4>
+                            <p class="category">GeneSeek Application</p>
+                        </div>
+                        <div class="content">
+                            <h2>@ViewData["Title"].</h2>
+                            <h3>@ViewData["Message"]</h3>
+                            <p>Use this area to provide additional information.</p>
+
+                            <h3>Welcome, @ViewData["UserName"] !</h3>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <p>User @User.Identity.Name is signed in.</p>
+                            }
+                            else
+                            {
+                                <p>No user is signed in.</p>
+                            }
+                        </div>
+                    </div> <!-- card -->
+                </div> <!-- column 1 -->
+                <div class="col-md-8">
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container-fluid -->
+    </div> <!-- CONTAINER -->
+
+    @Html.Partial("~/Views/Shared/_Footer.cshtml")
+
+</div> <!-- MAIN PANEL -->

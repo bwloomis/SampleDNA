@@ -1,0 +1,84 @@
+﻿@{
+    ViewData["Title"] = "Tables";
+}
+
+<div class="main-panel">
+    @Html.Partial("~/Views/Shared/_NavigationMenu.cshtml")
+
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Status</h4>
+                            <p class="category">Order status</p>
+                        </div>
+                        <div class="content table-responsive table-full-width">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                <th>LIMS Order</th>
+                                <th>RegID</th>
+                                <th>Current stage</th>
+                                <th>Number of samples</th>
+                                <th>Comments</th>
+                                <th>Actions</th>
+                                </th>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>556-31-5436-4</td>
+                                        <td>In process (awaiting parentage)</td>
+                                        <td>500</td>
+                                        <td>Request per Cobb (Judy) ASAP</td>
+                                        <td>
+                                            <ol>
+                                                <li><a>Details</a></li>
+                                                <li><a>Issues</a></li>
+                                                <li><a>Add parentage</a></li>
+                                                <li><a>Cancel</a></li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>123-31-6712-4</td>
+                                        <td>Completed</td>
+                                        <td>5000</td>
+                                        <td>Clean run</td>
+                                        <td>
+                                            <ol>
+                                                <li><a>Details</a></li>
+                                                <li>Issues</li>
+                                                <li>Cancel</li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>855-89-6621-0</td>
+                                        <td>Failed auto checks (see Issues)</td>
+                                        <td>862</td>
+                                        <td>Experimental run - per Bob</td>
+                                        <td>
+                                            <ol>
+                                                <li><a>Details</a></li>
+                                                <li><a>Issues</a></li>
+                                                <li><a>Cancel</a></li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Html.Partial("~/Views/Shared/_Footer.cshtml")
+</div> <!-- MAIN PANEL -->
+

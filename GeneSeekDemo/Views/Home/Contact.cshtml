@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+
+<div class="main-panel">
+
+    @Html.Partial("~/Views/Shared/_NavigationMenu.cshtml")
+
+    <div class="container body-content content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">About</h4>
+                            <p class="category">GeneSeek Application</p>
+                        </div>
+                        <div class="content">
+                            <h2>@ViewData["Title"].</h2>
+                            <h3>@ViewData["Message"]</h3>
+                            <address>
+                                One Microsoft Way<br />
+                                Redmond, WA 98052-6399<br />
+                                <abbr title="Phone">P:</abbr>
+                                425.555.0100
+                            </address>
+                            <address>
+                                <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
+                                <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+                            </address>
+                            <h2>Drop a file below</h2>
+                            <!-- script src="~/js/dropzone.js"></!--script> -->
+                            <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+                            <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+                            
+                            <!-- Change /upload-target to your upload address -->
+                            <form action="/upload-target" class="dropzone"></form>
+                            <hr />
+                            <div class="jumbotron">
+                                <form action="~/Home/SaveUploadedFile" method="post" enctype="multipart/form-data" class="dropzone" id="dropzoneForm" style="width: 50px; background: none; border: none;">
+                                    <div class="fallback">
+                                        <input name="file" type="file" multiple />
+                                        <input type="submit" value="Upload" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div> <!-- card -->
+                </div> <!-- column 1 -->
+                <div class="col-md-8">
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container-fluid -->
+    </div> <!-- CONTAINER -->
+
+    @Html.Partial("~/Views/Shared/_Footer.cshtml")
+
+</div> <!-- MAIN PANEL -->

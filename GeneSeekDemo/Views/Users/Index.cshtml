@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Available Users";
+}
+
+@model IEnumerable<goofy.Models.UserData.AvailableUser>
+<div class="main-panel">
+
+    @Html.Partial("~/Views/Shared/_NavigationMenu.cshtml")
+
+    <div class="container body-content content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Available Users</h4>
+                            <p class="category">GeneSeek Application</p>
+                        </div>
+                        <div class="content">
+                            <h2>AvailableUserList</h2>
+                            <P>@DateTime.Now</P>
+                            <hr />
+                            @foreach (var usr in @Model)
+                            {
+                                <text>
+                                @usr.UserName   @usr.UserPassword <br />
+                                </text>
+                            }
+                        </div>
+                    </div> <!-- card -->
+                </div> <!-- column 1 -->
+                <div class="col-md-8">
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container-fluid -->
+    </div> <!-- CONTAINER -->
+
+    @Html.Partial("~/Views/Shared/_Footer.cshtml")
+
+</div> <!-- MAIN PANEL -->
